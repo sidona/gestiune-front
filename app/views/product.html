@@ -1,0 +1,25 @@
+<div ng-controller="ProductCtrl">
+
+    <div>
+        <div>
+            <button class="btn btn-default" style="margin-bottom: 20px"><a ui-sref="addProduct">Add product</a></button>
+        </div>
+        <div id="editor"></div>
+        <button class="btn btn-primary" ng-click="exportPdf()" id="cmd">ia</button>
+    </div>
+
+    <div id="pdf">
+        <table class="table table-bordered" id="tableProduct">
+            <tr style="text-align: center">
+                <td>Id</td>
+                <td>Product</td>
+
+            </tr>
+            <tr ng-repeat="product in products">
+                <td><a ui-sref="productDetail({id:product.id})"> {{product.id}}</a></td>
+                <td> {{product.name}}</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
