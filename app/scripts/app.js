@@ -36,5 +36,10 @@ angular.module('gestiuneFrontApp')
       url: '/product/:id',
       templateUrl: "views/productDetail.html",
       controller: 'ProductDetailCtrl'
-    })
+    });
+    $stateProvider
+      .state('customer', {
+        url: '/customer',
+        templateUrl: "views/customer.html"
+      });
 });
